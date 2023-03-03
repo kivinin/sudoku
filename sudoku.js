@@ -29,10 +29,17 @@ function solve(boardString) {
     //console.log(fillArr);
     fillArr = [];
   }
-  return resArrV;
+  let arrRec = []
+  //console.log(arrRec);
+  for (let i = 0; i < 3; i += 1) {
+    for (let j = 3; j < 6; j += 1) {
+      arrRec.push(resArrV[i][j]);
+    }
+  }
+  return arrRec;
 }
 
-//console.log(solve(boardString));
+console.log(solve(boardString));
 /**
  * Принимает игровое поле в том формате, в котором его вернули из функции solve.
  * Возвращает булевое значение — решено это игровое поле или нет.
